@@ -1,0 +1,71 @@
+{% extends 'listing/base.html' %}
+{% load static %}
+{% block title %}Home - Find your service{% endblock %}
+{% block content %}
+
+    <!--Home Section-->
+  <section class="home container mb-5">
+    <div class="row mt-5">
+        <div class="col-lg-6 mt-5 py-5 pl-5">
+            <img class="img-fluid" alt="" src="{% static 'img/google.jpg' %}">
+        </div>
+        <div class="col-lg-6 my-auto">
+            <div class="row">
+                <div class="home-content offset-lg-1 col-lg-10">
+                    <h1 class="pb-3">Keep track of the world with our app</h1>
+                    <p class="pb-3">I love website development. I started from scratch last year. I am really enjoying it</p>
+                    <button class="btn btn-outline-secondary btn-lg">Learn More</button>
+                    <button class="btn btn-secondary btn-lg">Contact us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+    <section class="home container mb-5">
+    <div class="row mt-5">
+        <div class="col-lg-6 my-auto">
+            <div class="row">
+                <div class="home-content offset-lg-1 col-lg-10">
+                    <h1 class="pb-3">Keep track of the world with our app</h1>
+                    <p class="pb-3">I love website development. I started from scratch last year. I am really enjoying it</p>
+                    <button class="btn btn-outline-secondary btn-lg">Learn More</button>
+                    <button class="btn btn-secondary btn-lg">Contact us</button>
+                </div>
+            </div>
+        </div>
+        <div class="col-lg-6 mt-5 py-5 pl-5">
+            <img class="img-fluid" alt="" src="{% static 'img/google.jpg' %}">
+        </div>
+    </div>
+  </section>
+
+    <section class="home container mb-5">
+    <div class="row mt-5">
+        <div class="col-lg-6 mt-5 py-5 pl-5">
+            <img class="img-fluid" alt="" src="{% static 'img/google.jpg' %}">
+        </div>
+        <div class="col-lg-6 my-auto">
+            <div class="row">
+                <div class="home-content offset-lg-1 col-lg-10">
+                    <h1 class="pb-3">Keep track of the world with our app</h1>
+                    <p class="pb-3">I love website development. I started from scratch last year. I am really enjoying it</p>
+                    <button class="btn btn-outline-secondary btn-lg">Learn More</button>
+                    <button class="btn btn-secondary btn-lg">Contact us</button>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+
+    <!-- Call to action-->
+  <section class="call-to-action py-5">
+        <div class="container text-center w-50">
+            <h2 class="py-3">We Got Your Back!</h2>
+            <div class="mx-auto heading-line"></div>
+            <p class="py-3">Get experts to assist you solve your business problems</p>
+            <a class="btn btn-primary btn-lg" href="{% url 'business_list' %}">Explore Businesses</a>
+        </div>
+  </section>
+
+{% endblock %}

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}{% endblock %}</title>
+
+    <!-- Import Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'bootstrap-4.4.1-dist/css/bootstrap.min.css' %}">
+
+    <!-- Import Font-Awesome CSS -->
+    <link rel="stylesheet" href="{% static 'font-awesome-4.7.0/css/font-awesome.min.css' %}">
+
+    <!-- Import CSS -->
+    <link rel="stylesheet" href="{% static 'css/listing.css' %}">
+
+</head>
+<body>
+         {% include 'listing/navbar.html' %}
+    <!-- Body -->
+
+        {% block content %}
+        {% endblock %}
+
+        {% include 'listing/footer.html' %}
+</body>
+    <!-- Import JQuery -->
+    <script src="{% static 'bootstrap-4.4.1-dist/js/bootstrap.bundle.min.js' %}"></script>
+
+</html>

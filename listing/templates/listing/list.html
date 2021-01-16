@@ -1,0 +1,32 @@
+{% extends 'listing/base.html' %}
+{% load static %}
+{% block title %}Businesses - Find your service{% endblock %}
+{% block content %}
+<div class="container">
+    <br><br><br><br><br>
+    <div class="row">
+        <div class="col-md-2">
+
+        </div>
+        <div class="col-md-8">
+            {% for listing in listings %}
+            <h4>
+                <img class="navbar-brand" src="{{ listing.logo.url }}" style="width: 20%" alt=""><a href="{{ listing.get_absolute_url }}">{{ listing.name }}</a>
+            </h4>
+            <p> <strong>Category:</strong> {{ listing.category }}</p>
+            <p>
+                <strong>About Us:</strong> {{ listing.about }}
+            </p>
+            <p><strong>Our Services:</strong></p>
+            {{ listing.service|linebreaks }}
+            <hr>
+            {% endfor %}
+             {% include 'listing/pagination.html' with page=listings %}
+        </div>
+        <div class="col-md-2">
+
+        </div>
+    </div>
+    <br><br>
+</div>
+{% endblock %}

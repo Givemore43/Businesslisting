@@ -1,0 +1,125 @@
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+h1,
+h2,
+h3{
+    font-weight:900;
+}
+
+h4,
+h5,
+h6{
+    font-weight:700;
+}
+
+/* Button Effects */
+.btn-outline-secondary{
+    background-color:transparent !important;
+    border-color:#011627 !important;
+    color:#011627 !important;
+    border-radius:0;
+    position: relative;
+}
+
+.btn-outline-secondary:before{
+    content: '';
+    position: absolute;
+    background-color: #83F3ED;
+    top:0;
+    left:0;
+    height: 100%;
+    width:0%;
+    z-index: -1;
+    transition: 0.5s;
+}
+
+.btn-outline-secondary:hover:before{
+    width: 100%;
+}
+
+.btn-secondary{
+    background: #011627 !important;
+    border-radius: 0;
+    border-color: #011627 !important;
+}
+
+.btn-secondary:hover{
+    color: #83F3ED !important;
+}
+
+.btn-primary{
+    background: #83F3ED !important;
+    border-radius: 0;
+    border-color: #83F3ED !important;
+    color: #011627 !important;
+}
+
+.btn-primary:hover{
+    background: #011627 !important;
+    color: #83F3ED !important;
+}
+
+
+/* Navbar */
+
+.navbar{
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+.nav-link,
+.navbar-brand{
+    color: #011627;
+}
+
+.nav-link:hover,
+.navbar-brand:hover{
+    color: #777;
+}
+
+.navbar-brand{
+    font-size: 1.8rem;
+}
+
+/* Logo */
+.navbar-brand img{
+  height: 5rem;
+}
+
+/* Call to Action */
+.call-to-action{
+    background: #ffffff;
+    color: #000000;
+}
+
+.heading-line{
+    height:3px;
+    width:10%;
+    background: #83F3ED;
+}
+
+/* Footer */
+.footer{
+    background: #011627;
+    color: #fafaff;
+}
+
+.footer a{
+    color: #fafaff;
+}
+
+/* Responsiveness */
+@media(max-width: 900px){
+    .navbar .nav-item{
+        display: block;
+        width: 100%;
+        padding: 10px 0px;
+        text-align: center;
+    }
+    .call-to-action .container{
+        width: 100% !important;
+    }
+}
+

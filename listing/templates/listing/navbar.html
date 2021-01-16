@@ -1,0 +1,38 @@
+<!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <a class="navbar-brand" href=""><strong>GnA</strong></a>
+        <button class="navbar-toggler bg-light" type="button" data-toggle="collapse" data-target="#navNavbar"
+        aria-controls="navNavbar" aria-expanded="false" aria-label="Toggle navigation">
+           <span class="navbar-toggler-icon"><i class="fa fa-bars"></i></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navNavbar">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">Home<span class="sr-only">(current)</span></a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="{% url 'business_list' %}">Businesses</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="">About</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link" href="">Contact</a>
+                </li>
+                 <li class="nav-item">
+                    <a class="nav-link btn btn-outline-secondary" href="">Add Listing</a>
+                </li>
+            </ul>
+
+            <form class="form-inline ml-3" action="{% url 'search' %}" method="GET">
+                <div class="input-group">
+                    <input type="text" name="name" class="form-control" placeholder="Search Business">
+                    <div class="input-group-append">
+                        <button type="submit" class="btn btn-warning">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </nav>

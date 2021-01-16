@@ -1,0 +1,1 @@
+web: gunicorn business_listing.wsgi --log-file -

@@ -1,0 +1,83 @@
+{% extends 'listing/base.html' %}
+{% load static %}
+{% block title %}{{ listing.name }}{% endblock %}
+{% block content %}
+<div class="container">
+    <br><br><br><br><br><br>
+    <div class="row shadow-sm p-3 mb-5 bg-white rounded">
+        <div class="col-md-6">
+            <h4><img class="navbar-brand" style="width: 20%" src="{{ listing.logo.url }}" alt="">{{ listing.name }}</h4>
+            <p><strong>Category:</strong> {{ listing.category }}</p>
+            <h4>Business Address:</h4>
+            <p><i class="fa fa-map"></i> {{ listing.address }}</p>
+        </div>
+        <div class="col-md-6">
+            <img style="width: 90%; object-fit: cover" src="{{ listing.cover.url }}" alt="">
+        </div>
+    </div>
+    <br>
+    <div class="row shadow-sm p-3 mb-5 bg-white rounded">
+        <div class="col-md-6">
+            <h4>About:</h4>
+            <p>{{ listing.about }}</p>
+        </div>
+        <div class="col-md-6">
+            <h4>Services:</h4>
+            <p>{{ listing.service|linebreaks }}</p>
+        </div>
+    </div>
+
+    <div class="row shadow-sm p-3 mb-5 bg-white rounded">
+        <div class="col-md-6">
+            <p><i class="fa fa-phone"></i> {{ listing.telephone }}</p>
+        </div>
+        <div class="col-md-6">
+            <p><i class="fa fa-envelope"></i> <a href="">{{ listing.email }}</a></p>
+        </div>
+        <div class="col-md-6">
+           <p><i class="fa fa-phone"></i> {{ listing.phone }}</p>
+        </div>
+        <div class="col-md-6">
+            <p><i class="fa fa-firefox"></i> <a href="">{{ listing.website }}</a></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+             {% with reviews.count as total_reviews %}
+        <h4>
+            {{ total_reviews }} <i class="fa fa-commenting"></i>review {{ total_reviews|pluralize }}
+        </h4>
+        {% endwith %}
+
+        {% for review in reviews %}
+            <div>
+                <p>
+                    <i>Review {{ forloop.counter }} by {{ review.name }}
+                        {{ review.created }}</i>
+                </p>
+                <div class="text shadow-none p-0 mb-0 bg-light rounded">
+                    {{ review.body|linebreaks }}
+                </div>
+            </div>
+        {% empty %}
+        <p>There are no reviews yet</p>
+        {% endfor %}
+        </div>
+        <div class="col-md-6">
+            {% if new_review %}
+        <h4>Your review has been added</h4>
+        {% else %}
+        <h4>Add new review</h4>
+        <div class="form-group">
+            <form method="POST">
+                {% csrf_token %}
+                {{ review_form.as_p }}
+                <p><input class="btn btn-primary btn-lg" type="submit" value="Add Review"></p>
+            </form>
+        </div>
+        {% endif %}
+        </div>
+    </div>
+    <br><br>
+</div>
+{% endblock %}
