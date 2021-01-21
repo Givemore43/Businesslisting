@@ -10,7 +10,7 @@ def home(request):
 
 def business_list(request):
     object_list = Listing.objects.all()
-    paginator = Paginator(object_list, 3)
+    paginator = Paginator(object_list, 6)
     page = request.GET.get('page')
     try:
         listings = paginator.page(page)
@@ -42,5 +42,8 @@ def list_detail(request, year, month, day, listing):
 
 def search(request):
     listings = Listing.objects.filter(name__contains=request.GET['name'])
-    return render(request, 'listing/list.html', {'listings': listings})
+    return render(request, 'listing/list_search.html', {'listings': listings})
+
+def business(request):
+    return render(request, 'listing/add_listing.html')
 

@@ -1,21 +1,22 @@
 {% extends 'listing/base.html' %}
 {% load static %}
-{% block title %}Home - Find your service{% endblock %}
+{% block title %}Home - Grow your online visibility{% endblock %}
 {% block content %}
 
     <!--Home Section-->
   <section class="home container mb-5">
     <div class="row mt-5">
         <div class="col-lg-6 mt-5 py-5 pl-5">
-            <img class="img-fluid" alt="" src="{% static 'img/google.jpg' %}">
+            <img class="img-fluid" alt="" src="{% static 'img/business.jpg' %}">
         </div>
         <div class="col-lg-6 my-auto">
             <div class="row">
                 <div class="home-content offset-lg-1 col-lg-10">
-                    <h1 class="pb-3">Keep track of the world with our app</h1>
-                    <p class="pb-3">I love website development. I started from scratch last year. I am really enjoying it</p>
-                    <button class="btn btn-outline-secondary btn-lg">Learn More</button>
-                    <button class="btn btn-secondary btn-lg">Contact us</button>
+                    <h1 class="pb-3">What are you looking for?</h1>
+                    <p class="pb-3">Whatever you are looking for you have come to the right platform.
+                        Find the right experts for the job or task here!
+                    </p>
+                    <button class="btn btn-outline-secondary btn-lg"><a href="{% url 'business_list' %}">Explore</a></button>
                 </div>
             </div>
         </div>
@@ -27,15 +28,14 @@
         <div class="col-lg-6 my-auto">
             <div class="row">
                 <div class="home-content offset-lg-1 col-lg-10">
-                    <h1 class="pb-3">Keep track of the world with our app</h1>
-                    <p class="pb-3">I love website development. I started from scratch last year. I am really enjoying it</p>
-                    <button class="btn btn-outline-secondary btn-lg">Learn More</button>
-                    <button class="btn btn-secondary btn-lg">Contact us</button>
+                    <h1 class="pb-3">List your business with us</h1>
+                    <p class="pb-3">Get free digital marketing for your business for 2 weeks after listing with us.
+                    Let your business dominate the digital space.</p>
                 </div>
             </div>
         </div>
         <div class="col-lg-6 mt-5 py-5 pl-5">
-            <img class="img-fluid" alt="" src="{% static 'img/google.jpg' %}">
+            <img class="img-fluid" alt="" src="{% static 'img/home.jpg' %}">
         </div>
     </div>
   </section>
@@ -48,10 +48,10 @@
         <div class="col-lg-6 my-auto">
             <div class="row">
                 <div class="home-content offset-lg-1 col-lg-10">
-                    <h1 class="pb-3">Keep track of the world with our app</h1>
-                    <p class="pb-3">I love website development. I started from scratch last year. I am really enjoying it</p>
-                    <button class="btn btn-outline-secondary btn-lg">Learn More</button>
-                    <button class="btn btn-secondary btn-lg">Contact us</button>
+                    <h1 class="pb-3">Advertise your business</h1>
+                    <p class="pb-3">The secret to successful advertising hinges on getting noticed, creating and offering value
+                        for money. We help you take your business
+                    to greater heights.</p>
                 </div>
             </div>
         </div>
@@ -63,8 +63,8 @@
         <div class="container text-center w-50">
             <h2 class="py-3">We Got Your Back!</h2>
             <div class="mx-auto heading-line"></div>
-            <p class="py-3">Get experts to assist you solve your business problems</p>
-            <a class="btn btn-primary btn-lg" href="{% url 'business_list' %}">Explore Businesses</a>
+            <p class="py-3">Boost your business's online visibilty, acquire new customers and increase sales.</p>
+            <a class="btn btn-primary btn-lg" href="{% url 'business_list' %}">List With Us</a>
         </div>
   </section>
 

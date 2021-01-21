@@ -7,4 +7,5 @@ urlpatterns = [
     path('list_detail/<int:year>/<int:month>/<int:day>/<slug:listing>/',
          views.list_detail, name='list_detail'),
     path('search/', views.search, name='search'),
+    path('list_business/', views.business, name='list_business'),
 ]

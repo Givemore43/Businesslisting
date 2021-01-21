@@ -61,7 +61,6 @@ h6{
     color: #83F3ED !important;
 }
 
-
 /* Navbar */
 
 .navbar{
@@ -86,6 +85,10 @@ h6{
 /* Logo */
 .navbar-brand img{
   height: 5rem;
+}
+
+.fa fa-star{
+    color: #f4f4f4;
 }
 
 /* Call to Action */

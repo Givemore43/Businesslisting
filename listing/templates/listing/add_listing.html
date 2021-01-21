@@ -1,0 +1,24 @@
+{% extends 'listing/base.html' %}
+{% load static %}
+{% block title %}Add Listing - Acquire new customers{% endblock %}
+{% block content %}
+<section class="home container mb-5">
+    <div class="row mt-5">
+        <div class="col-lg-6 mt-5 py-5 pl-5">
+            <img class="img-fluid" alt="" src="{% static 'img/success.jpg' %}">
+        </div>
+        <div class="col-lg-6 my-auto">
+            <div class="row">
+                <div class="home-content offset-lg-1 col-lg-10">
+                    <h1 class="pb-3">List Your Business</h1>
+                    <p class="pb-2">Send your business info</p>
+                    <p class="pb-2"><i class="fa fa-envelope"></i> info@gnatechnologies.co.za</p>
+                    <p class="pb-2"><i class="fa fa-phone"></i> +27 65 164 9637</p>
+                    <p class="pb-2"><i class="fa fa-whatsapp"></i> <a href="https://wa.me/27651649637">Whatsapp us</a></p>
+                    <p class="pb-2"><i>Terms & Conditions Apply</i></p>
+                </div>
+            </div>
+        </div>
+    </div>
+  </section>
+{% endblock %}

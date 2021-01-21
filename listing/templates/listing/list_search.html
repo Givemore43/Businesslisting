@@ -1,6 +1,6 @@
 {% extends 'listing/base.html' %}
 {% load static %}
-{% block title %}Businesses - Browse companies{% endblock %}
+{% block title %}Search - Search Business{% endblock %}
 {% block content %}
 <div class="container">
     <br><br><br><br><br>
@@ -22,8 +22,9 @@
                 <i class="fa fa-phone"></i>{{ listing.telephone }}  |   <i class="fa fa-phone"></i>{{ listing.phone }}  |   <i class="fa fa-envelope"></i>{{ listing.email }}
             </p>
             <hr>
+            {% empty %}
+            <p>Ooops.., business not found.</p>
             {% endfor %}
-             {% include 'listing/pagination.html' with page=listings %}
         </div>
         <div class="col-md-2">
 
